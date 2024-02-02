@@ -3,7 +3,7 @@
 #include <string>
 
 using namespace std;
-const int maximum_pupil= 3;
+const int maximum_pupil= 30;
 
 
 void Student_data(double weights[], string names[]) {
@@ -50,10 +50,11 @@ void output_weight_difference(double weights[], string names[], double weightDif
       cout << "Name: " << names[i] << ", Difference: " << weightDifferences[i]<< " kg! "  << "\n";
         }
         
-    } if(!check_student)
-       {
-       	cout<<"\n No any student has difference!";
-	   }
+    } if (!check_student) {
+        cout << "No student has a weight difference greater than 2.5 kilograms.\n";
+    } else {
+        cout << "\nAt least one student has a weight difference!\n";
+    }
 }
 
 int main() {
